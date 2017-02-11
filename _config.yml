@@ -1,0 +1,17 @@
+title: TIGRTech Group
+email: your-email@domain.com
+description: >
+  The official web site of TIGRTech Group, LLC.
+baseurl: ""
+url: "tigrtech.com"
+
+google_analytics: "UA-62353337-2"
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - READEME.md
