@@ -1,0 +1,6 @@
+- name: SERVICES
+  url: "/services/"
+- name: ABOUT
+  url: "/about/"
+- name: CONTACT
+  url: "/contact/"

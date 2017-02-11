@@ -18,10 +18,20 @@
         </div>
         <nav>
           <ul>
-            <li><a class="" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-            <li><a class="" href="/services/">SERVICES</a></li>
-            <li><a class="" href="/about/">ABOUT</a></li>
-            <li><a class="" href="/contact/">CONTACT</a></li>
+            {% if page.url == '/' %}
+              <li><a class="active" href="/"><i class="fa fa-home"></i></a></li>
+            {% else %}
+              <li><a class="" href="/"><i class="fa fa-home"></i></a></li>
+            {% endif %}
+
+            {% for navItem in site.data.nav %}
+              {% if page.url == navItem.url %}
+                <li><a class="active" href="{{ navItem.url }}">{{ navItem.name }}</a></li>
+              {% else %}
+                <li><a class="" href="{{ navItem.url }}">{{ navItem.name }}</a></li>
+              {% endif %}
+            {% endfor %}
+
           </ul>
         </nav>
       </div>
